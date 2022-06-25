@@ -1,0 +1,28 @@
+{
+  "name": "teetow.github.io",
+  "homepage": "https://teetow.com",
+  "version": "1.0.0",
+  "repository": "https://github.com/teetow/teetow.github.io.git",
+  "author": "Johan Althoff <teetow@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@radix-ui/colors": "^0.1.8",
+    "@stitches/react": "^1.2.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rooks": "^5.11.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "@vitejs/plugin-react": "^1.3.2",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.12"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}
