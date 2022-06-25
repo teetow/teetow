@@ -18,10 +18,12 @@ const HomeContainer = styled("div", {
   alignItems: "center",
   display: "flex",
   flexFlow: "column nowrap",
+  gap: "1rem",
 });
 
 const HeaderView = styled("h1", {
   textAlign: "center",
+  margin: "0 0 3rem",
 });
 
 const List = styled("ul", {
@@ -30,7 +32,7 @@ const List = styled("ul", {
   margin: 0,
   alignItems: "center",
   display: "flex",
-  gap: "2em",
+  gap: "2rem",
 
   variants: {
     axis: {
@@ -49,11 +51,11 @@ const Link = styled("a", {
   alignItems: "center",
   color: "$amber10",
   display: "flex",
-  gap: "0.7em",
+  gap: "0.7rem",
 });
 
 const TeeAvatar = styled("img", {
-  size: "28em",
+  size: "50%",
 });
 
 const Home = () => {
@@ -65,18 +67,18 @@ const Home = () => {
       <List axis="horizontal">
         <ListItem>
           <Link href="https://soundcloud.com/teetow">
-            <Icon icon="soundcloud" size={"2em"} /> SoundCloud
+            <Icon icon="soundcloud" size={"2rem"} /> SoundCloud
           </Link>
         </ListItem>
         <ListItem>
           <Link href="https://twitter.com/teetow">
-            <Icon icon="twitter" size={"2em"} />
+            <Icon icon="twitter" size={"2rem"} />
             Twitter
           </Link>
         </ListItem>
         <ListItem>
           <Link href="https://github.com/teetow">
-            <Icon icon="github" size={"2em"} />
+            <Icon icon="github" size={"2rem"} />
             Github
           </Link>
         </ListItem>

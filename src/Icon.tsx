@@ -4,7 +4,7 @@ import { styled } from "../stitches.config";
 
 const SvgView = styled("svg", {
   fill: "currentColor",
-  "--size": "3em",
+  "--size": "3rem",
   size: "var(--size)",
 
   "&>*": {
