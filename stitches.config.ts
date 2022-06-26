@@ -12,6 +12,11 @@ export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme
     },
     fonts: { inter: "Inter, sans-serif" },
   },
+  media: {
+    bp1: "(min-width: 320px)",
+    bp2: "(min-width: 480px)",
+    bp3: "(min-width: 768px)",
+  },
 
   utils: {
     size: (value: number | string) => ({

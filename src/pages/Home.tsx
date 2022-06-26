@@ -1,6 +1,7 @@
 import { globalCss, styled } from "../../stitches.config";
-import Icon from "../ui/Icon";
 import Tee from "../assets/tee.webp";
+import Icon from "../ui/Icon";
+import { List, ListItem } from "../ui/List";
 
 const bodyStyles = globalCss({
   "@import":
@@ -26,27 +27,6 @@ const HeaderView = styled("h1", {
   margin: "0 0 3rem",
 });
 
-const List = styled("ul", {
-  listStyle: "none",
-  padding: 0,
-  margin: 0,
-  alignItems: "center",
-  display: "flex",
-  gap: "2rem",
-
-  variants: {
-    axis: {
-      horizontal: { flexFlow: "row nowrap" },
-      vertical: { flexFlow: "column nowrap" },
-    },
-  },
-});
-
-const ListItem = styled("li", {
-  alignItems: "center",
-  display: "flex",
-});
-
 const Link = styled("a", {
   alignItems: "center",
   color: "$amber10",
@@ -64,7 +44,7 @@ const Home = () => {
     <HomeContainer>
       <TeeAvatar src={Tee}></TeeAvatar>
       <HeaderView>Yes?</HeaderView>
-      <List axis="horizontal">
+      <List axis="horizontal" responsive>
         <ListItem>
           <Link href="https://soundcloud.com/teetow">
             <Icon icon="soundcloud" size={"2rem"} /> SoundCloud
