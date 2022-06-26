@@ -1,6 +1,6 @@
-import { globalCss, styled } from "../stitches.config";
-import Icon from "./Icon";
-import Tee from "./assets/tee.webp";
+import { globalCss, styled } from "../../stitches.config";
+import Icon from "../ui/Icon";
+import Tee from "../assets/tee.webp";
 
 const bodyStyles = globalCss({
   "@import":

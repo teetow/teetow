@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import Home from "./Home";
+import Home from "./pages/Home";
 
 const root = createRoot(document.getElementById("app")!);
 

@@ -1,6 +1,5 @@
-import { ComponentProps } from "@stitches/react";
-import React, { ReactNode, SVGAttributes } from "react";
-import { styled } from "../stitches.config";
+import { SVGAttributes } from "react";
+import { styled } from "../../stitches.config";
 
 const SvgView = styled("svg", {
   fill: "currentColor",
