@@ -1,17 +1,18 @@
 import { styled } from "../../stitches.config";
 
 export const List = styled("ul", {
-  listStyle: "none",
-  padding: 0,
-  margin: 0,
   alignItems: "center",
-  display: "flex",
-  gap: "2rem",
+  display: "grid",
+  gap: "1.8rem",
+  gridAutoFlow: "column",
+  listStyle: "none",
+  margin: 0,
+  padding: 0,
 
   variants: {
     axis: {
-      horizontal: { flexFlow: "column wrap" },
-      vertical: { flexFlow: "column wrap" },
+      horizontal: {},
+      vertical: {},
     },
     responsive: {
       true: {},
@@ -22,24 +23,20 @@ export const List = styled("ul", {
       axis: "horizontal",
       responsive: true,
       css: {
-        "@initial": {
-          flexFlow: "column wrap",
-        },
+        gridAutoFlow: "row",
+
         "@bp2": {
-          flexFlow: "row wrap",
-        },
-        "@bp3": {
+          gridAutoFlow: "column",
         },
       },
     },
   ],
 });
 
-export const ResponsiveList = styled(List, {
-
-})
+export const ResponsiveList = styled(List, {});
 
 export const ListItem = styled("li", {
   alignItems: "center",
   display: "flex",
+  gap: 0,
 });

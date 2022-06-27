@@ -1,20 +1,4 @@
-import { SVGAttributes } from "react";
-import { styled } from "../../stitches.config";
-
-const SvgView = styled("svg", {
-  fill: "currentColor",
-  "--size": "3rem",
-  size: "var(--size)",
-
-  "&>*": {
-    fill: "inherit",
-  },
-});
-
-type SvgDef = {
-  attrs: SVGAttributes<SVGSVGElement>;
-  children: JSX.Element;
-};
+import { SvgDef } from "./assetutils";
 
 const assets: Record<string, SvgDef> = {
   soundcloud: {
@@ -55,15 +39,4 @@ const assets: Record<string, SvgDef> = {
   },
 } as const;
 
-type Props = {
-  icon: keyof typeof assets;
-  size?: number | string;
-};
-
-const Icon = ({ icon, size }: Props) => (
-  <SvgView css={{ size }} {...{ ...assets[icon].attrs }}>
-    {assets[icon].children}
-  </SvgView>
-);
-
-export default Icon;
+export default assets;
