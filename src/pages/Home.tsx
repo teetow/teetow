@@ -135,7 +135,9 @@ const Card = ({ asset, size = "12rem" }: CardProps) => {
         <Thumbnail asset={asset} size={size} alt={asset.title} />
       </Link>
       <Heading3>{asset.title}</Heading3>
-      <Text css={{ fontSize: "0.8em", maxWidth: "12rem", margin: "0" }}>{asset.description}</Text>
+      <Text css={{ fontSize: "0.8em", maxWidth: "12rem", margin: "0" }}>
+        {asset.description}
+      </Text>
     </Stack>
   );
 };
@@ -153,7 +155,11 @@ const Home = () => {
   return (
     <HomeContainer className="home">
       <Header className="header">
-        <TeeAvatar className="avatar" src={Tee} css={{ margin: "2rem 0 0" }}></TeeAvatar>
+        <TeeAvatar
+          className="avatar"
+          src={Tee}
+          css={{ margin: "2rem 0 0" }}
+        ></TeeAvatar>
         <Heading1 css={{ justifySelf: "stretch" }}>Hm?</Heading1>
         <Text css={{ justifySelf: "stretch" }}>
           Oh, me? I'm Teetow.
@@ -170,7 +176,12 @@ const Home = () => {
         <Stack
           horizontal
           responsive
-          css={{ alignSelf: "center", justifyContent: "center", gap: "2rem", padding: "2rem 0" }}
+          css={{
+            alignSelf: "center",
+            justifyContent: "center",
+            gap: "2rem",
+            padding: "2rem 0",
+          }}
         >
           {Object.entries(assets).map(([title, asset]) => (
             <Card key={title} asset={asset} size="12rem" />
@@ -181,13 +192,20 @@ const Home = () => {
       <Social axis="horizontal" responsive>
         <ListItem>
           <SocialLink href="https://soundcloud.com/teetow">
-            <SvgImage asset={iconassets.soundcloud} size={"1.5rem"} /> SoundCloud
+            <SvgImage asset={iconassets.soundcloud} size={"1.5rem"} />
+            SoundCloud
           </SocialLink>
         </ListItem>
         <ListItem>
           <SocialLink href="https://twitter.com/teetow">
             <SvgImage asset={iconassets.twitter} size={"1.5rem"} />
             Twitter
+          </SocialLink>
+        </ListItem>
+        <ListItem>
+          <SocialLink rel="me" href="https://indieweb.social/@teetow">
+            <SvgImage asset={iconassets.mastodon} size={"1.5rem"} />
+            Mastodon
           </SocialLink>
         </ListItem>
         <ListItem>
